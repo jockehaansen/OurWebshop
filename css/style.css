@@ -80,31 +80,41 @@ body{
 }
 
 .card-button{
-    margin-top: 20px;
+    margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.card-button button{
-    border-radius: 2%;
 }
 
 .card img{
     border-radius: 2%;
 }
 
+.card-image-top{
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
 .card-body{
-    overflow: hidden;    
+    overflow: auto; 
 }
 
 .card{
     margin-bottom: 15px;
     border-radius: 2%;
+    height: 450px;   
+    
 }
 
 .card-title{
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+}
+
+.card-text{
+    max-height: 100px;
+    overflow: auto;
+    margin-bottom: 5px;
 }

@@ -1,26 +1,39 @@
 
-/*function getProducts(){
+//12 produkter lagrade i ett array
+fetch('https://fakestoreapi.com/products?limit=12')
+.then(response => response.json())
+.then(data => {
     let products = []
-    const response = fetch('https://fakestoreapi.com/products?limit=12')
-                    .then(res => res.json())
-                    .then(json => products.push(json))
 
     
-    
-    console.log(products)
-            
+    data.forEach(product => {
+        
+        let productInfo = {
+            id: product.id,
+            title: product.title,
+            price: product.price,
+            description: product.description,
+            category: product.category,
+            image: product.image
+        };
+
+        products.push(productInfo);
+    });
+
+    console.log(products);
+})
+.catch(error => {
+    console.log('Error fetching data:', error);
+});
+
+//Skicka med produkten till nästa sida
+function openOrderPageWithProduct(){
     
 }
 
-*/
 
-const images = document.getElementsByClassName('card-image-top')
 
-for (let index = 0; index < products.length; index++) {
-    images[index].src = products[index].image
-    
-}
-
+//Hämtar produkter och ritar upp alla element och information direkt utan lagring
 function getProducts() {
     const images = document.getElementsByClassName('card-image-top');
     const titles = document.getElementsByClassName('card-title')
@@ -30,7 +43,6 @@ function getProducts() {
     fetch('https://fakestoreapi.com/products?limit=12')
         .then(res => res.json())
         .then(products => {
-            // Once data is fetched, iterate through each product and update the corresponding image
             for (let index = 0; index < products.length; index++) {
                 images[index].src = products[index].image;
                 titles[index].innerHTML = products[index].title
@@ -43,3 +55,5 @@ function getProducts() {
             console.error('Error fetching products:', error);
         });
 }
+
+

@@ -29,26 +29,3 @@ function renderProduct(product) {
     card.innerHTML = cardContent;
     document.getElementById('productDisplay').appendChild(card);
 }
-document.addEventListener('DOMContentLoaded', function() {
-    const container = document.querySelector('.text-center');
-
-    // Create the button element
-    const orderButton = document.createElement('button');
-    orderButton.id = 'orderButton';
-    orderButton.type = 'submit';
-    orderButton.classList.add('btn', 'btn-primary', 'p-2', 'm-5', 'w-25', 'align-center');
-    orderButton.textContent = 'Beställ';
-
-    // Add event listener to the button
-    orderButton.addEventListener('click', function() {
-        // Handle button click event here
-        const productId = encodeURIComponent('${product.id}'); // Assuming you have product id available
-        const url = `card.html?productId=${productId}`;
-      
-        // Redirect to the new page
-        window.location.href = url;
-    });
-
-    // Append the button to the container
-    container.appendChild(orderButton);
-});

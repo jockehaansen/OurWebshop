@@ -71,26 +71,34 @@ body {
   padding: 10px 0;
 }
 
+.card-button {
+  height: 16%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  margin-bottom: 5px;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
 .addToCartBtn {
   background: #5f6769;
   color: #fff;
   border-radius: 50%;
   border: none;
   padding: 10px;
-}
-
-.card a {
+  margin-right: 25px;
   text-decoration: none;
+  flex: 1;
 }
 
-.card-button {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.card-button h6 {
+  padding-top: 12px;
+  flex: 1;
 }
 
-.card img {
+.card img{
   border-radius: 2%;
 }
 
@@ -101,7 +109,9 @@ body {
 }
 
 .card-body {
-  overflow: auto;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .card {
@@ -114,10 +124,12 @@ body {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+  height: 30%;
+  overflow: auto;
 }
 
 .card-text {
   max-height: 100px;
   overflow: auto;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }

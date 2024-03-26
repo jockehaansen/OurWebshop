@@ -39,9 +39,9 @@ function renderProducts(product, row) {
             <p class="card-text">${product.description}</p>
             <div class="card-button">
                 <h6 class="item-price">${product.price} $</h6>
-                <form>
-                    <a href="#"<button type="button" class="addToCartBtn" id="${product.id}">Buy Now</button></a>
-                </form>
+                
+                  <a href="form.html?productId=${product.id}" class="addToCartBtn" id="${product.id}"><button type="button"Buy Now</button></a>
+                
             </div>
         </div>`
 

@@ -55,5 +55,24 @@
 
       </div>
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    // Fånga knappklickhändelsen för "Beställ"
+    const orderButton = document.querySelector('.btn-primary');
+    orderButton.addEventListener('click', function() {
+        // Hämta inputvärden från formuläret
+        const name = document.getElementById('name').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const address = document.getElementById('adress').value;
+        const email = document.getElementById('email').value;
+
+        // Skapa en URL för den nya sidan med nödvändig data som URL-parametrar
+        const newPageUrl = `confirmation.html?name=${name}&phoneNumber=${phoneNumber}&address=${address}&email=${email}&productId=${productId}`;
+
+        // Navigera till den nya sidan
+        window.location.href = newPageUrl;
+    });
+});
+    </script>
 </body>
 </html>

@@ -38,10 +38,8 @@ function renderProducts(product, row) {
             <h6 class="card-title">${product.title}</h6>
             <p class="card-text">${product.description}</p>
             <div class="card-button">
-                <h6 class="item-price">${product.price} $</h6>
-                
-                  <a href="form.html?productId=${product.id}" class="addToCartBtn" id="${product.id}"><button type="button"Buy Now</button></a>
-                
+                <h6 class="item-price">${product.price} $</h6>                
+                <a href="form.html?productId=${product.id}"><button class="addToCartBtn" >Buy Now</button><a/>                
             </div>
         </div>`
 
@@ -50,6 +48,7 @@ function renderProducts(product, row) {
   row.appendChild(col)
 
   //grab the item ID
+  /*
   const buyNowBtn = card.querySelector('.addToCartBtn')
   buyNowBtn.addEventListener('click', function (event) {
     //kanske inte behövs här
@@ -61,4 +60,13 @@ function renderProducts(product, row) {
     console.log('ProductID to be sent over: ' + productId)
     buyNowProductId = productId
   })
+  */
 }
+
+/*
+
+<a href="form.html?productId=${product.id}" class="addToCartBtn" id="${product.id}"><button type="button"Buy Now</button></a>
+
+class="addToCartBtn"
+
+*/

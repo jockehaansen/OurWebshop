@@ -6,11 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const address = urlParams.get('address');
     const email = urlParams.get('email');
     const productId = urlParams.get('productId');
-
-    // Visa användarinformation och produktinformation på sidan
     
-
-    // Hämta produktinformation från API:et baserat på produktens ID
     fetch(`https://fakestoreapi.com/products/${productId}`)
         .then((response) => response.json())
         .then((product) => {
@@ -20,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error fetching product details:', error);
         });
 
-    // Funktion för att rendera produktinformation på sidan
     function renderProduct(product) {
         const card = document.createElement('div');
         card.classList.add('card');

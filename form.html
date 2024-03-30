@@ -23,33 +23,47 @@
 
             <form action="#">
                 <div class="mb-3">
-                    <label for="name">Namn:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Ange för- & efternamn" name="name">
+                    <label for="name" class="form-label">Namn:</label>
+                    <input type="text" oninput="validateForm()" class="form-control" id="namn" placeholder="Ange för- & efternamn" name="name" required>
+                    <div id="namn_error" class="valid-form">Namnet är för kort/lång</div>
                 </div>
               <div class="mb-3">
-                    <label for="phoneNumber">Telefonnr:</label>
-                    <input type="number" class="form-control" id="phoneNumber" placeholder="Ange telefonnr" name="Telefonnr">
+                    <label for="telefonnr">Telefonnr:</label>
+                    <input type="number" oninput="validateForm()" class="form-control" id="telefonnr" placeholder="Ange telefonnr" name="Telefonnr">
+                    <p id="telefonnr_error" class="valid-form">Telefonnr får bara innehålla siffror, bindestreck och paranteser</p>
               </div>
               <div class="mb-3">
-                <label for="adress">Adress:</label>
-                <input type="text" class="form-control" id="adress" placeholder="Ange adress" name="Adress">
+                <label for="adress">Gatudress:</label>
+                <input type="text" oninput="validateForm()" class="form-control" id="gatuadress" placeholder="Ange adress" name="Adress">
+                <p id="adress_error" class="valid-form">Adressen är för kort/lång</p>
             </div>
+            <div class="mb-3">
+                  <label for="postnummer">Postnummer:</label>
+                  <input type="number" oninput="validateForm()" class="form-control" id="postnummer" placeholder="Ange postnummer" name="Postnummer" required>
+                  <p id="postnummer_error" class="valid-form">måste vara exakt 5 siffror</p>
+            </div>
+            <div class="mb-3">
+              <label for="ort">Ort:</label>
+              <input type="text" oninput="validateForm()" class="form-control" id="ort" placeholder="Ange ort" name="Ort">
+              <p id="ort_error" class="valid-form">Orten är för lång/kort</p>
+          </div>
               <div class="mb-3">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ange din e-post" name="email">
+                    <input type="email" oninput="validateForm()" class="form-control" id="email" placeholder="Ange din e-post" name="email">
+                    <p id="email_error" class="valid-form">E-postadressen måste innehålla '@' och max 50 tecken</p>
               </div>
 
             </form>
           </div>
 
-          <div class="col-6 p-3 border border-1">
+          <div class="col-6 p-3 border border-1 justify-content-center">
             <h4>Dina varor</h4>
             <div id="productDisplay">
 
             </div>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn btn-primary p-2 m-5 w-25 align-center">Beställ</button>
+            <button type="submit" disabled  id="submitButton" class="btn btn-primary p-2 m-5 w-25 align-center">Beställ</button>
 
           </div>
 

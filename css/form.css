@@ -1,4 +1,10 @@
+.productDisplay{
+    border:none;
+    
+}
 .card{
     border:none;
-    max-width: 250px;
+}
+.valid-form{
+    color:red;
 }

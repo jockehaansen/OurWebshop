@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <h2>ange leveransinformation</h2>
-        <div class="row p-5">
-          <div class="col-6 p-3 border border-1 ">
+    <div class="container">
+        <h2 class="pt-3 text-center">Ange leveransinformation</h2>
+        <div class="row p-5 w-75 mx-auto">
+          <div class="col-6 p-3 border border-1">
             <h4>Formulär</h4>
 
-            <form action="#">
+            <form action="confirmation.html">
                 <div class="mb-3">
                     <label for="name" class="form-label">Namn:</label>
                     <input type="text" oninput="validateForm()" class="form-control" id="namn" placeholder="Ange för- & efternamn" name="name" required>
@@ -46,13 +46,15 @@
               <label for="ort">Ort:</label>
               <input type="text" oninput="validateForm()" class="form-control" id="ort" placeholder="Ange ort" name="Ort">
               <p id="ort_error" class="valid-form">Orten är för lång/kort</p>
-          </div>
+            </div>
               <div class="mb-3">
                     <label for="email">Email:</label>
                     <input type="email" oninput="validateForm()" class="form-control" id="email" placeholder="Ange din e-post" name="email">
                     <p id="email_error" class="valid-form">E-postadressen måste innehålla '@' och max 50 tecken</p>
               </div>
-
+              <div class="text-center">
+                <button type="submit" disabled  id="submitButton" class="btn btn-primary p-2 m-5 w-25 align-center">Beställ</button>
+              </div>
             </form>
           </div>
 
@@ -62,14 +64,12 @@
 
             </div>
           </div>
-          <div class="text-center">
-            <button type="submit" disabled  id="submitButton" class="btn btn-primary p-2 m-5 w-25 align-center">Beställ</button>
 
-          </div>
 
       </div>
     </div>
     <script>
+      // Det här låter all dokument ladda ner innan javascript körs igång för att inte få några null
       document.addEventListener('DOMContentLoaded', function() {
     const orderButton = document.querySelector('.btn-primary');
     orderButton.addEventListener('click', function() {

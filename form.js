@@ -70,7 +70,7 @@ function validateForm(){
         namn_error.innerHTML = "Giltig";
         namn_error.style.color = "green"
     }
-    if(formTelefonNummer.length<50){
+    if(formTelefonNummer.length >0 && formTelefonNummer.length<50){
         telefonnr_error.innerHTML = "Giltig";
         telefonnr_error.style.color = "green"    }
     if(formAdress.length > 2 && formAdress.length<50){

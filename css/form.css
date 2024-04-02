@@ -4,6 +4,8 @@
 }
 .card{
     border:none;
+    height: 800px;
+    overflow:auto
 }
 .valid-form{
     color:red;

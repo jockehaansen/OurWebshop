@@ -46,27 +46,4 @@ function renderProducts(product, row) {
   card.innerHTML = cardContent
   col.appendChild(card)
   row.appendChild(col)
-
-  //grab the item ID
-  /*
-  const buyNowBtn = card.querySelector('.addToCartBtn')
-  buyNowBtn.addEventListener('click', function (event) {
-    //kanske inte behövs här
-    event.preventDefault()
-
-    //set this as the id of the product that we want to carry through purchase and
-    //confirmation screen
-    const productId = event.target.id
-    console.log('ProductID to be sent over: ' + productId)
-    buyNowProductId = productId
-  })
-  */
 }
-
-/*
-
-<a href="form.html?productId=${product.id}" class="addToCartBtn" id="${product.id}"><button type="button"Buy Now</button></a>
-
-class="addToCartBtn"
-
-*/

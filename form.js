@@ -26,6 +26,7 @@ function renderProduct(product) {
 
   card.innerHTML = cardContent
   document.getElementById('productDisplay').appendChild(card)
+  document.getElementById('productId').value = `${productId}`;
 }
 
 // Vi kollar varje input och ser om det är korrekt ifylld

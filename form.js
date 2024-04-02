@@ -21,7 +21,7 @@ function renderProduct(product) {
         <img src="${product.image}" class="card-image-top w-25 h-25 mx-auto" alt="${product.title}">
             <div class="card-body">
                 <h6 class="card-title text-center">${product.title}</h6>
-                <p class="card-title text-center">${product.description}</p>
+                <p class=" text-center">${product.description}</p>
 
                      <h5 class="item-price pt-2 text-center">${product.price} $</h5>
             </div>`;
